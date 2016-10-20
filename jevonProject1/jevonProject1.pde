@@ -13,6 +13,14 @@ void draw() {
   stroke(255);
   strokeWeight(1);
   
+  //pressing Spacebar resets everything to black
+  //but must wait until everything has finished moving!
+  if(keyPressed){
+    if(key==32){
+      background(0);
+    }
+  }
+  
   //display ALL bricks
   for (int i=0; i<bricks.length; i++) {
     bricks[i].move();
